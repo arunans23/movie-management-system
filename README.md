@@ -1,1 +1,1 @@
-# movie-management-system
+# movie-management-system [![Build Status](https://travis-ci.org/arunans23/movie-management-system.svg?branch=master)](https://travis-ci.org/arunans23/movie-management-system)
