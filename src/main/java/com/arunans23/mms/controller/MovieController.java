@@ -2,6 +2,8 @@ package com.arunans23.mms.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,5 +20,10 @@ public class MovieController{
     @RequestMapping(method = RequestMethod.GET, value="/movie")
     public Movie getMovie(@RequestParam(value="id", defaultValue = "0") int id){
         return demoMovie;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value="/movie")
+    public boolean addMovie(HttpServletRequest request){
+        return true;
     }
 }
