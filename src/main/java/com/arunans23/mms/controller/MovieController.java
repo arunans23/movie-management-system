@@ -3,6 +3,7 @@ package com.arunans23.mms.controller;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +15,7 @@ public class MovieController{
 
     Movie demoMovie = new Movie(counter.incrementAndGet(), "Sample Movie");
 
-    @RequestMapping("/movie")
+    @RequestMapping(method = RequestMethod.GET, value="/movie")
     public Movie getMovie(@RequestParam(value="id", defaultValue = "0") int id){
         return demoMovie;
     }
